@@ -1,0 +1,28 @@
+#N canvas 5 21 630 251 10;
+#X msg 44 115 3;
+#X msg 90 41 1 \, 2 \, 3 \, 4;
+#X text 42 98 number;
+#X obj 90 148 memorex 10;
+#X text 144 86 size;
+#X obj 90 183 print;
+#X msg 147 103 -7;
+#X text 233 32 Memorex - records 'number' history in a memory buffer
+of size 'size'.;
+#X obj 118 82 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+1;
+#X text 115 66 replay;
+#X text 233 65 replay: if off (0) \, pass 'number' through to the output
+while recording. If on (1) \, replay the buffer in a loop while ignoring
+the 'number' input except as a trigger.;
+#X text 233 112 size: (integer) the size of the memory buffer. If positive
+\, the buffer is FIFO (first in \, first out). If negative \, the buffer
+is LIFO (last in \, first out). Changing it erases the buffer history.
+Its initial value can be set as an object argumment [memorex size].
+;
+#X text 233 186 'number' \, 'replay' and 'size' can be each sent as
+messages to the left input \, each with one argument.;
+#X connect 0 0 3 0;
+#X connect 1 0 3 0;
+#X connect 3 0 5 0;
+#X connect 6 0 3 2;
+#X connect 8 0 3 1;
