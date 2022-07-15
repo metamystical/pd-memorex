@@ -25,7 +25,7 @@ six notes in the chord \, the rest are set to zero.;
 #X msg 62 15 5 6 7 8;
 #X msg 104 186;
 #X text 240 10 Memorex - records input history in a memory buffer of
-size 'size'. Input can be a single integer or a list of up to eight
+size 'size'. Input can be a single integer or a list of up to six
 integers \, or fewer if the second object argument is set.;
 #X text 240 104 size: (integer) the size of the memory buffer. If positive
 \, the buffer is FIFO (first in \, first out). If negative \, the buffer
