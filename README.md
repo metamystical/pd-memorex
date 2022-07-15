@@ -3,7 +3,7 @@
 
 ### Description
 
-[memorex ] records input history in a memory buffer of size 'size'. Input can be a single integer or a list of up to eight integers, or fewer if the second object argument is set in [memorex size num_chord_notes].
+[memorex ] records input history in a memory buffer of size 'size'. Input can be a single integer or a list of up to six integers, or fewer if the second object argument is set in [memorex size num_chord_notes].
 
 There are two modes of operation controlled by the **replay** input. When **replay** is off (0), the **number** input is passed through to the output
 while recording it in the memory buffer. When **replay** is on (1), the recorded **number** input history is replayed to the outputs using the changing
